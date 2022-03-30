@@ -1,30 +1,18 @@
 import 'package:flutter/material.dart';
 
-//exercise 5
+//Ejercicio 7
 void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
         body: Center(
           child: Container(
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                elevation: 2,
-                padding: EdgeInsets.all(32),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0)),
-              ),
-              onPressed: () {},
-              child: Text(
-                "Click me",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22,
-                  color: Colors.lightBlue,
-                ),
-                
-              ),
+            width: 24,
+            height: 24,
+            child: Image.asset(
+              "assets/image/heart.png",
+
+              color: Colors.black,
             ),
           ),
         ),
@@ -32,3 +20,4 @@ void main() {
     ),
   );
 }
+
