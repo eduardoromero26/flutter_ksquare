@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
-//Ejercicio 7
+//Ejercicio 2
 void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
         body: Center(
           child: Container(
-            width: 24,
-            height: 24,
+            color: Colors.black,
+            width: 100,
+            height: 100,
+            padding: EdgeInsets.all(16.0),
             child: Image.asset(
-              "assets/image/heart.png",
+              "assets/image/google.png",
 
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
         ),
