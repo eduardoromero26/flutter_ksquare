@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 
-//Ejercicio 7
+//Ejercicio 1
 void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Container(
-            width: 24,
-            height: 24,
-            child: Image.asset(
-              "assets/image/heart.png",
-
-              color: Colors.black,
+        backgroundColor: Colors.black,
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          child: const Center(
+            child: Text(
+              "Hello World!",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
