@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//exercise 4
+//exercise 5
 void main() {
   runApp(
     MaterialApp(
@@ -9,14 +9,22 @@ void main() {
           child: Container(
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.black,
-                fixedSize: const Size(100, 50),
-                elevation: 1,
+                primary: Colors.white,
+                elevation: 0,
+                padding: EdgeInsets.all(32),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(0)),
               ),
               onPressed: () {},
-              child: Text("Click me"),
+              child: Text(
+                "Click me",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: Colors.lightBlue,
+                ),
+                
+              ),
             ),
           ),
         ),
