@@ -10,7 +10,7 @@ void main() {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,
-                elevation: 0,
+                elevation: 2,
                 padding: EdgeInsets.all(32),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(0)),
