@@ -1,4 +1,4 @@
-# Task 1
+# Task 2
 ## Screenshot
-![exercise1](screenshots/02_display_image.png)
+![exercise2](screenshots/02_display_image.png)
 
