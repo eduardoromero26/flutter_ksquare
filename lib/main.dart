@@ -1,48 +1,71 @@
 import 'package:flutter/material.dart';
 
-//Exercise 9
+//Exercise 10
 void main() {
   runApp(
     MaterialApp(
-      home: Scaffold(
-        backgroundColor : Colors.grey,
-        body: Center(
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.white,
+          body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            child: Column(
               children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  padding: const EdgeInsets.all(12.0),
-                  decoration: const BoxDecoration(
-                    color: Colors.orange,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Image.asset(
-                    "assets/image/google.png",
-                  ),
+                Expanded(
+                  flex: 3,
+                  child: Image.asset("assets/image/login_image.jpg",
+                      width: double.infinity, height: 420, fit: BoxFit.fill),
                 ),
                 const SizedBox(
-                  //Salto de linea
-                  height: 12,
+                  height: 20,
                 ),
-                const Text(
-                  "APPMAKING.COM",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black,
+                Expanded(
+                  flex: 1,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: 320,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.white,
+                          ),
+                          child: const Text(
+                            "Login with Google Account",
+                            style: TextStyle(
+                                fontSize: 14, color: Colors.black),
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                      SizedBox(
+                        width: 320,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.black,
+                          ),
+                          child: const Text("Login with Apple Account",
+                              style: TextStyle(fontSize: 14)),
+                          onPressed: () {},
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(4),
+                        child: const Text(
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                          style: TextStyle(fontSize: 10),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
                   ),
                 ),
-                const Text(
-                  "widget where the elements",
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.black,
-                  ),
-                ),
-              ]),
+              ],
+            ),
+          ),
         ),
       ),
     ),
