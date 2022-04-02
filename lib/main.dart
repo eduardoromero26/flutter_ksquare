@@ -4,67 +4,217 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Container(
-            height: 220,
-            width: 240,
-            color: Colors.grey,
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, 
+      home: SafeArea(
+        child: Scaffold(
+          body: GridView.count(
+            padding: EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 28,
+            ),
+            crossAxisCount: 2,
+            crossAxisSpacing: 16.0,
+            mainAxisSpacing: 16.0,
             children: [
-              Column(
-                children: [
-                  Container(
-                    height: 80,
-                    width: 80,
-                    child: const CircleAvatar(
-                      backgroundImage: AssetImage('assets/image/profile_image.jpg'),
-                    ),
-                  ),
-                  const SizedBox(
-                    //Salto de linea
-                    height: 16,
-                  ),
-                  const Text(
-                    "APPMAKING.COM",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const Text(
-                    "widget where the elements",
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Row(
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  color: Color.fromARGB(104, 64, 195, 255),
+                ),
+                child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.facebook,
-                        size: 24,
-                      ),
-                      Icon(
-                        Icons.telegram,
-                        size: 24,
-                      ),
-                      Icon(
-                        Icons.credit_card,
-                        size: 24,
-                      ),
-                    ],
-                  ),
-                ],
-              )
-            ]),
+                      Column(
+                        children: [
+                          Container(
+                            height: 36,
+                            width: 36,
+                            child: Icon(
+                              Icons.manage_accounts,
+                            ),
+                          ),
+                          const SizedBox(
+                            //Salto de linea
+                            height: 12,
+                          ),
+                          const Text(
+                            "Manage Account",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  color: Color.fromARGB(104, 64, 195, 255),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 36,
+                            width: 36,
+                            child: Icon(
+                              Icons.shopping_cart,
+                            ),
+                          ),
+                          const SizedBox(
+                            //Salto de linea
+                            height: 12,
+                          ),
+                          const Text(
+                            "Shopping Cart",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  color: Color.fromARGB(104, 64, 195, 255),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 36,
+                            width: 36,
+                            child: Icon(
+                              Icons.payment,
+                            ),
+                          ),
+                          const SizedBox(
+                            //Salto de linea
+                            height: 12,
+                          ),
+                          const Text(
+                            "Payments",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  color: Color.fromARGB(104, 64, 195, 255),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 36,
+                            width: 36,
+                            child: Icon(
+                              Icons.shop_two,
+                            ),
+                          ),
+                          const SizedBox(
+                            //Salto de linea
+                            height: 12,
+                          ),
+                          const Text(
+                            "Shop",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  color: Color.fromARGB(104, 64, 195, 255),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 36,
+                            width: 36,
+                            child: Icon(
+                              Icons.qr_code_scanner,
+                            ),
+                          ),
+                          const SizedBox(
+                            //Salto de linea
+                            height: 12,
+                          ),
+                          const Text(
+                            "QR Code Scanner",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  color: Color.fromARGB(104, 64, 195, 255),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 36,
+                            width: 36,
+                            child: Icon(
+                              Icons.local_shipping,
+                            ),
+                          ),
+                          const SizedBox(
+                            //Salto de linea
+                            height: 12,
+                          ),
+                          const Text(
+                            "Shipping",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
+            ],
           ),
         ),
       ),
