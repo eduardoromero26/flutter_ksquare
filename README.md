@@ -1,4 +1,4 @@
-# Task 7
+# Task 8
 ## Screenshot
-![exercise7](screenshots/07_icon_button.png)
+![exercise8](screenshots/08_Column_1_image_text.png)
 
