@@ -1,70 +1,46 @@
 import 'package:flutter/material.dart';
 
-//Exercise 10
+//default inin flutter
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.white,
           body: Container(
-            height: double.infinity,
             width: double.infinity,
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: Image.asset("assets/image/login_image.jpg",
-                      width: double.infinity, height: 420, fit: BoxFit.fill),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        width: 320,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                          ),
-                          child: const Text(
-                            "Login with Google Account",
-                            style: TextStyle(
-                                fontSize: 14, color: Colors.black),
-                          ),
-                          onPressed: () {},
-                        ),
-                      ),
-                      SizedBox(
-                        width: 320,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.black,
-                          ),
-                          child: const Text("Login with Apple Account",
-                              style: TextStyle(fontSize: 14)),
-                          onPressed: () {},
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(4),
-                        child: const Text(
-                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                    ],
+            height: 50,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 28,
+                    width: 28,
+                    color: Colors.black,
+                    child: Image.asset(
+                      "assets/image/google.png",
+                      color: Colors.white,
+                      width: 100,
+                      height: 100,
+                    ),
                   ),
-                ),
-              ],
-            ),
+                  Container(
+                    child: const Text(
+                      "APPMAKING.COM",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Icon(
+                    Icons.heart_broken,
+                    color: Colors.black,
+                    size: 24,
+                  ),
+                ]),
           ),
         ),
       ),
