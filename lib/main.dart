@@ -14,24 +14,26 @@ void main() {
             children: [
               Container(
                 width: 320,
-                child: OutlinedButton(
-                  
+                child: ElevatedButton(
                   onPressed: () {},
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Icon(
-                        Icons.heart_broken,
-                        color: Colors.lightBlue,
-                        size: 16,
+                        Icons.shopify,
+                        color: Colors.white,
+                        size: 24,
+                      ),
+                      SizedBox(
+                        width: 8,
                       ),
                       const Text(
-                        "Continue with Google",
+                        "Continue with Shopify",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                          color: Colors.lightBlue,
+                          fontSize: 14,
+                          color: Colors.white,
                         ),
                       ),
                     ],
