@@ -1,6 +1,6 @@
-# Task 16
+# Task 17
 ## Screenshot
-![exercise16](screenshots/16_instagram_card.png)
+![exercise17](screenshots/17_stack_product_ui.png)
 
 
 

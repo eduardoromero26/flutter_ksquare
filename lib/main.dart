@@ -1,100 +1,72 @@
 import 'package:flutter/material.dart';
 
-//Exercise 12
-void main() {
-  runApp(
-    MaterialApp(
-      home: SafeArea(
-        child: Scaffold(
-          body: Container(
-            child: Center(
-              child: Container(
-                height: 280,
-                width: 300,
-                color: Colors.grey[200],
-                child: Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(4.0),
-                      child: Row(children: [
-                        Container(
-                          child: const CircleAvatar(
-                            backgroundImage:
-                                AssetImage('assets/image/profile_image.jpg'),
+void main() => runApp(
+      MaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              height: 360,
+              width: 360,
+              color: Colors.grey[300],
+              child: Stack(
+                children: [
+                  SizedBox(
+                    height: double.infinity,
+                    width: double.infinity,
+                    child: Image.asset(
+                      "assets/image/food.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Container(
+                      height: 80,
+                      color: Colors.black.withOpacity(0.5),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 10,
                           ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Expanded(
-                          child: Container(
+                          Container(
+                            child: CircleAvatar(
+                              backgroundImage:
+                                  AssetImage("assets/image/profile_image.jpg"),
+                              radius: 24,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Container(
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
+                              children: const [
+                                Text(
                                   "Eduardo Romero",
                                   style: TextStyle(
-                                    fontSize: 14,
-                                  ),
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w500),
                                 ),
-                                const Text(
-                                  "5 minutes ago",
+                                Text(
+                                  "5 mins ago",
                                   style: TextStyle(
-                                    fontSize: 12,
-                                  ),
+                                      color: Colors.white, fontSize: 18),
                                 ),
                               ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Container(
-                          child: Icon(
-                            Icons.more_vert,
-                          ),
-                        ),
-                      ]),
-                    ),
-                    Container(
-                      child: Image.asset(
-                        "assets/image/food.jpg",
-                        height: 200,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(4),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [Icon(Icons.thumb_up), Text("Like")],
-                            ),
-                          ),
-                          Container(
-                            child: Row(
-                              children: [Icon(Icons.message), Text("Comment")],
-                            ),
-                          ),
-                          Container(
-                            child: Row(
-                              children: [Icon(Icons.share), Text("Share")],
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
         ),
       ),
-    ),
-  );
-}
+    );
