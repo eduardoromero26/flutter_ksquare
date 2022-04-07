@@ -1,6 +1,6 @@
-# Task 17
+# Task 18
 ## Screenshot
-![exercise17](screenshots/17_stack_product_ui.png)
+![exercise18](screenshots/18_login_screen_ui.png)
 
 
 
