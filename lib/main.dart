@@ -1,111 +1,122 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-      MaterialApp(
-        home: Scaffold(
-          body: Center(
-            child: Stack(
+void main() {
+  runApp(
+    MaterialApp(
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text("Exercise 19"),
+          ),
+          body: Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 12.0,
+              horizontal: 12.0,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: double.infinity,
-                  width: double.infinity,
-                  child: Image.asset(
-                    "assets/image/nature.jpg",
-                    fit: BoxFit.fill,
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Name',
+                        ),
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Last Name',
+                        ),
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Email',
+                        ),
+                      ),
+                      const TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Password',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.0,
+                      ),
+                      Text(
+                        "Genre",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                      CheckboxListTile(
+                        title: Text("Male"),
+                        value: false,
+                        onChanged: (newValue) {},
+                        controlAffinity: ListTileControlAffinity
+                            .leading, //  <-- leading Checkbox
+                      ),
+                      CheckboxListTile(
+                        title: Text("Female"),
+                        value: false,
+                        onChanged: (newValue) {},
+                        controlAffinity: ListTileControlAffinity
+                            .leading, //  <-- leading Checkbox
+                      ),
+                    ],
                   ),
                 ),
-                Center(
-                  child: Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 360,
-                          height: 60,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.facebook,
-                                  color: Colors.white,
-                                  size: 28,
-                                ),
-                                SizedBox(
-                                  width: 8,
-                                ),
-                                const Text(
-                                  "Continue with Facebook",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
+                Expanded(
+                  flex: 1,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      CheckboxListTile(
+                        title: Text(
+                          "Restarted application in 1,481ms, Restarted application in 1,481ms,Restarted application in 1,481ms, ",
+                          style: TextStyle(
+                            fontSize: 12.0,
                           ),
                         ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Container(
-                          width: 360,
-                          height: 60,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
-                            ),
-                            onPressed: () {},
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.email,
-                                  color: Colors.lightBlue,
-                                  size: 28,
-                                ),
-                                SizedBox(
-                                  width: 8,
-                                ),
-                                const Text(
-                                  "Continue with Email",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    color: Colors.lightBlue,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          child: Text(
-                            "Location Access Configuration & Permission Handling",
+                        value: false,
+                        onChanged: (newValue) {},
+                        controlAffinity: ListTileControlAffinity.leading,
+                      ),
+                      Container(
+                        width: 320,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "Register Account",
                             style: TextStyle(
+                              fontWeight: FontWeight.bold,
                               fontSize: 14,
                               color: Colors.white,
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 40,
-                        ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      )
+                    ],
                   ),
-                )
+                ),
               ],
             ),
           ),
         ),
       ),
-    );
+    ),
+  );
+}
