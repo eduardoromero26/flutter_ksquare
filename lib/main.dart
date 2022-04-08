@@ -23,8 +23,7 @@ void main() {
                   UserPostWidget(),
                   UserPostWidget(),
                   UserPostWidget(),
-                  UserPostWidget(),
-                  UserPostWidget(),
+
                 ],
               ),
             ),
