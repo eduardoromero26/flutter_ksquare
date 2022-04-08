@@ -1,6 +1,6 @@
-# Task 21
+# Task 22
 ## Screenshot
-![exercise21](screenshots/21_list_view_product_listing.png)
+![exercise22](screenshots/22_list_view_social_card.png)
 
 
 
